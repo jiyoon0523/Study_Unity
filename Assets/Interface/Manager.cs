@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         flowerObj = GameObject.FindGameObjectWithTag("flower");
+        iflower= flowerObj.GetComponent<iFlower>();
     }
 
     // Update is called once per frame
@@ -18,7 +19,8 @@ public class Manager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            flowerObj.GetComponent<iFlower>().NameFlower();
+            iflower.NameFlower();
+            //flowerObj.GetComponent<iFlower>().NameFlower();
         }
     }
 }
